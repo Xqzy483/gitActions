@@ -26,7 +26,8 @@ jobs:
             python-version: 3.9
         
         - name: install lib
-          run: pip install -r ../gitActions/requirements.txt
+#           run: pip install -r ../gitActions/requirements.txt
+          run: pip install requests
           
         - name: working
           run: python ../gitActions/emailTest.py
