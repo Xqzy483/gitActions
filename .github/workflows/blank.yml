@@ -12,5 +12,18 @@ jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Every time
-        run: echo "This step will always run"
+        - uses: action/checkout@v1
+        
+        - name: Every time
+          run: echo "This step will always run"
+          
+        - name: Set up Python3.9
+          uses: action/setup-python@v1
+          with: 
+            python-version: 3.9
+        
+        - name: install lib
+          run: pip install -r ./requirements.text
+          
+        - name: working
+          run: run python ./emailTest.py
