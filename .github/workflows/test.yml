@@ -1,0 +1,10 @@
+name: dir
+on: push
+
+jobs:
+  sayhi:
+    name: dir
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: dir ../../
